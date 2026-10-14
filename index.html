@@ -57,6 +57,7 @@ body{font-family:Manrope,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
   .wrap{max-width:none;padding:18px 14px 25px;background:transparent;color:var(--ink)}
   .heading{align-items:center;margin-bottom:15px;gap:10px}
   .eyebrow{color:var(--green);font-size:10px;letter-spacing:.08em}
+  .mobile-heading{display:inline}.desktop-heading{display:none}
   .heading h1{font:700 25px/1.12 -apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;letter-spacing:-.045em;color:var(--ink);margin:4px 0}
   .heading p{color:#6f796f;font-size:12px}
   .heading>.btn{font-size:11px;padding:10px 11px}
@@ -126,94 +127,122 @@ body{font-family:Manrope,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 }
 
 
-/* Mobile app layout from the supplied screens, in black and white */
+/* Mobile layout follows the supplied three-screen reference */
+.mobile-heading{display:none}
 .mobile-menu-btn,.mobile-bottom-nav{display:none}
 @media(max-width:700px){
-  :root{--forest:#101112;--forest2:#1c1d1f;--leaf:#282a2c;--cream:#090a0b;--paper:#151719;--ink:#f4f5f5;--muted:#a2a5a7;--line:#292b2d;--orange:#ed9a45;--orange-pale:#33291f;--green:#ed9a45;--shadow:0 2px 12px #0005;--radius:15px;--map-bg:#222426;--map-road:#393c3e;--map-road-edge:#2e3032;--map-accent:#e7a14d;--map-route:#ef9b45;--map-route-highlight:#f7c17d;--map-block:#2b2e30;--map-label:#adb1b2}
-  body{background:#090a0b;color:#f4f5f5;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",sans-serif;padding-bottom:75px}
-  .topbar{height:64px;background:#090a0b;padding:0 14px;border-bottom:1px solid #26282a;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
-  .brand{gap:9px}.brandmark{width:37px;height:37px;border-radius:10px;background:#ed9a45;color:#161616;box-shadow:none}
+  :root{
+    --forest:#111213;--forest2:#292b2d;--leaf:#f0f0ee;--cream:#f7f7f5;
+    --paper:#fff;--ink:#171819;--muted:#73777a;--line:#e5e6e3;
+    --orange:#e8953f;--orange-pale:#fff2df;--green:#151617;
+    --shadow:0 2px 10px #1012140b;--radius:14px;
+    --map-bg:#e8e9e6;--map-road:#d5d7d3;--map-road-edge:#c9cbc7;
+    --map-accent:#efb052;--map-route:#151617;--map-route-highlight:#444748;
+    --map-block:#d4d8d2;--map-label:#717773
+  }
+  body{background:#f7f7f5;color:#171819;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",sans-serif;padding-bottom:76px}
+  .topbar{height:64px;background:#111213;padding:0 14px;border:0;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
+  .brand{gap:9px}.brandmark{width:37px;height:37px;border-radius:10px;background:#ed9a45;color:#171819;box-shadow:none}
   .brand b{font:700 15px/1.1 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",sans-serif;letter-spacing:-.03em;color:#fff}
-  .brand small{font-size:9px;color:#b8bbbd;opacity:1}
-  .mobile-menu-btn{display:grid;place-items:center;width:38px;height:38px;flex:none;border:0;border-radius:10px;background:#191b1d;color:#fff;font-size:19px}
+  .brand small{font-size:9px;color:#d3d4d4;opacity:1}
+  .mobile-menu-btn{display:grid;place-items:center;width:38px;height:38px;flex:none;border:0;border-radius:9px;background:#262729;color:#fff;font-size:19px}
   .profilebtn{display:none}
-  .role-switch{display:none;position:fixed;z-index:35;left:auto;right:12px;top:72px;bottom:auto;width:174px;padding:7px;flex-direction:column;gap:3px;background:#191b1d;border:1px solid #333638;border-radius:13px;box-shadow:0 10px 35px #0009;backdrop-filter:none}
-  .role-switch.open{display:flex}.role-switch button{width:100%;text-align:left;color:#d4d6d7;background:transparent;padding:11px 12px;border-radius:9px}
-  .role-switch button.active{background:#f1f2f2;color:#101112}
-  .wrap{max-width:none;padding:18px 13px 25px;background:transparent;color:#f4f5f5}
+  .role-switch{display:none;position:fixed;z-index:35;left:auto;right:12px;top:72px;bottom:auto;width:174px;padding:7px;flex-direction:column;gap:3px;background:#fff;border:1px solid #e4e5e2;border-radius:12px;box-shadow:0 8px 28px #0002;backdrop-filter:none}
+  .role-switch.open{display:flex}.role-switch button{width:100%;text-align:left;color:#55595b;background:transparent;padding:11px 12px;border-radius:8px}
+  .role-switch button.active{background:#111213;color:#fff}
+  .wrap{max-width:none;padding:18px 13px 25px;background:transparent;color:#171819}
   .heading{align-items:center;margin-bottom:14px;gap:10px}
-  .eyebrow{color:#aeb1b3;font-size:10px;letter-spacing:.08em}
-  .heading h1{font:700 25px/1.12 -apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;letter-spacing:-.045em;color:#f7f7f7;margin:4px 0}
-  .heading p{color:#a7abad;font-size:12px}.date{display:none}
+  .eyebrow{color:#777b7d;font-size:10px;letter-spacing:.08em}
+  .heading h1{font:700 25px/1.12 -apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;letter-spacing:-.045em;color:#171819;margin:4px 0}
+  .heading p{color:#707578;font-size:12px}.date{display:none}
   .heading>.btn{font-size:11px;padding:10px 11px}
-  .btn{border-radius:10px}.btn.primary{background:#f0f1f1;color:#111;border:0;box-shadow:none}
-  .btn.accent{background:#ed9a45;color:#1b1712;box-shadow:none}
-  .btn.soft,.btn.outline,.iconbtn{background:#202224;color:#f0f1f1;border:1px solid #343739}
-  .btn.outline{background:#17191b}
-  .metrics{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:0 0 11px}
-  .metric,.card{background:#151719;border:1px solid #292b2d;box-shadow:0 2px 12px #0005;backdrop-filter:none;-webkit-backdrop-filter:none;border-radius:15px}
+  .btn{border-radius:10px}.btn.primary{background:#111213;color:#fff;border:0;box-shadow:none}
+  .btn.accent{background:#111213;color:#fff;box-shadow:none}
+  .btn.soft{background:#f0f0ee;color:#202223;border:1px solid #e3e4e1}
+  .btn.outline,.iconbtn{background:#fff;color:#111213;border:1px solid #d7d9d6}
+  .metrics{display:none}
+  .metric,.card{background:#fff;border:1px solid #e5e6e3;box-shadow:0 2px 10px #1012140b;backdrop-filter:none;-webkit-backdrop-filter:none;border-radius:14px}
   .metric{padding:12px 13px}.metric:after{display:none}
-  .metricline{font-size:10px;color:#b3b6b8}.metric strong{font-size:23px;color:#f6f6f6;margin-top:8px}
-  .metric strong small{color:#a2a5a7}.metricicon{height:27px;width:27px;background:#252729;border:0;color:#e5e6e6}
-  .layout{display:grid;grid-template-columns:1fr;gap:11px}.stack{grid-template-columns:1fr;gap:11px}
-  .card{border-radius:15px}.cardhead{padding:14px 14px 12px}
-  .cardhead h2{font:700 15px/1.25 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",sans-serif;letter-spacing:-.025em;color:#f4f4f4}
-  .cardhead p{font-size:11px;color:#a3a6a8}.textbtn{color:#f0a454}
-  .map{height:220px;margin:0 8px;background:#222426;border:0;border-radius:12px}
-  .mapbadge{background:#17191b;color:#e9eaea;border:1px solid #303335;box-shadow:0 2px 7px #0005;backdrop-filter:none}
+  .metricline{font-size:10px;color:#73777a}.metric strong{font-size:23px;color:#171819;margin-top:8px}
+  .metric strong small{color:#73777a}.metricicon{height:27px;width:27px;background:#f0f0ee;border:0;color:#171819}
+  .layout{display:grid;grid-template-columns:1fr;gap:10px}.stack{grid-template-columns:1fr;gap:10px}
+  .card{border-radius:14px}.cardhead{padding:14px 14px 12px}
+  .cardhead h2{font:700 15px/1.25 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",sans-serif;letter-spacing:-.025em;color:#171819}
+  .cardhead p{font-size:11px;color:#777b7d}.textbtn{color:#333638}
+  .layout>.card{display:flex;flex-direction:column}
+  .layout>.card>.cardhead{order:1}
+  .layout>.card>.route-summary{order:2;margin:0 8px 10px;padding:12px;border:1px solid #ececea;border-radius:12px;background:#fafaf9}
+  .layout>.card>.map{order:3}
+  .map{height:210px;margin:0 8px;background:#e8e9e6;border:0;border-radius:12px}
+  .mapbadge{background:#fff;color:#343839;border:1px solid #e4e5e2;box-shadow:0 2px 7px #10121412;backdrop-filter:none}
   .mapbadge i{background:#ed9a45;box-shadow:none}
-  .route-summary{padding:12px 14px 14px}.truckicon{background:#26282a;border:0;color:#f1f1f1;border-radius:11px}
-  .route-summary b,.driver b,.stop b,.client b,.next-card h3{color:#f2f3f3}
-  .route-summary small,.driver small,.stop small,.client small,.stop time{color:#a3a6a8}
-  .avatar{background:#282a2c;color:#f1f1f1;border:0}.online{background:#242628;color:#e6e7e7;border:0}
-  .progresslabel{color:#b4b7b8}.progress{background:#303234}.progress i{background:#ed9a45}
-  .stopnum{background:#292b2d;color:#f3f3f3;border:0}
-  .tablecard{margin-top:11px}.tablecard .cardhead{background:transparent}
-  .search{background:#101112;border-color:#303234;color:#c4c6c7}.search input{background:transparent;color:#f1f1f1}
-  .search input::placeholder{color:#929698}.pill{background:#191b1d;color:#c1c4c5;border-color:#303234}
-  .pill.active{background:#f0f1f1;color:#111;border-color:#f0f1f1}
-  .table td{color:#c3c5c6;border-color:#2b2d2f}.client b{color:#f4f4f4}
-  .status{background:#252729;color:#d2d4d5;border:0}.status.route{background:#302b24;color:#ffd09a}
-  .status.next{background:#302b24;color:#ffd09a}.status.done{background:#242628;color:#eceeee}
-  .status.late{background:#3a2723;color:#ffc0a5}
-  .mode-hint{background:#17191b;border:1px solid #2d3032;color:#c7c9ca}.mode-hint strong{color:#f3f3f3}
-  .driver-layout{grid-template-columns:1fr;gap:11px}.driver-card{padding:14px}
-  .driver-card .cardhead{padding:0 0 12px}.next-card,.cargo-box{background:#1b1d1f;border:1px solid #2e3032}
-  .next-card .label,.cargo-box small{color:#a6a9aa}.next-card p,.next-card .address,.reference{color:#c5c7c8}
-  .cargo-box b{color:#eeeeee}.delivery-row{background:#191b1d;border-color:#303234}
-  .delivery-row.current{border-color:#a96f36;background:#26211c}
-  .delivery-row b{color:#f2f2f2}.delivery-row small{color:#a2a5a7}
+  .route-summary b,.driver b,.stop b,.client b,.next-card h3{color:#171819}
+  .route-summary small,.driver small,.stop small,.client small,.stop time{color:#73777a}
+  .truckicon{background:#f0f0ee;border:0;color:#171819;border-radius:10px}
+  .avatar{background:#efefed;color:#171819;border:0}.online{background:#f0f0ee;color:#2b2d2e;border:0}
+  .progresslabel{color:#666a6c}.progress{background:#e9eae7}.progress i{background:#292b2d}
+  .stopnum{background:#ececea;color:#171819;border:0}
+  .tablecard{margin-top:10px}.tablecard .cardhead{background:transparent}
+  .search{background:#fff;border-color:#e1e2df;color:#55595b}.search input{background:transparent;color:#171819}
+  .search input::placeholder{color:#898d8f}.pill{background:#fff;color:#64686a;border-color:#e3e4e1}
+  .pill.active{background:#111213;color:#fff;border-color:#111213}
+  .table td{color:#55595b;border-color:#ededeb}.client b{color:#171819}
+  .status{background:#f0f0ee;color:#55595b;border:0}.status.route{background:#fff1df;color:#875515}
+  .status.next{background:#fff1df;color:#875515}.status.done{background:#efefed;color:#343839}
+  .status.late{background:#fbece7;color:#a54530}
+  .mode-hint{display:none}
+  .driver-layout{display:flex;flex-direction:column;gap:10px}
+  .driver-card{display:contents}
+  .driver-card>.cardhead{order:1;display:flex;padding:14px;background:#fff;border:1px solid #e5e6e3;border-radius:14px}
+  .driver-card>.next-card{order:2;margin:0;background:#fff;border:1px solid #e5e6e3;border-radius:14px;padding:14px}
+  .driver-card>.failure-note{order:3}
+  .driver-layout>.stack{display:contents}
+  .driver-layout>.stack>article:first-child{order:4}
+  .driver-card>.action-label{order:5;margin:3px 2px 0;color:#252728}
+  .driver-card>.status-actions{order:6;gap:8px}
+  .driver-card>.status-actions .btn{min-height:54px;justify-content:center;text-align:center}
+  .driver-card>.status-actions [data-status="Estou a caminho"],.driver-card>.status-actions [data-status="Concluída"]{background:#111213;color:#fff}
+  .driver-card>p{order:7}
+  .driver-layout>.stack>article:last-child{order:8}
+  .driver-card .cardhead{padding:14px}
+  .next-card .label,.cargo-box small{color:#777b7d}.next-card p,.next-card .address,.reference{color:#55595b}
+  .cargo-box{background:#fafaf9;border-color:#e8e9e6}.cargo-box b{color:#222425}
+  .delivery-row{background:#fff;border-color:#e6e7e4}.delivery-row.current{border-color:#dba35d;background:#fffaf3}
+  .delivery-row b{color:#171819}.delivery-row small{color:#73777a}
   .client-entry{margin:18px auto}.entry-card{padding:20px 17px}
-  .entry-card h2,.client-order h2{font:700 21px/1.15 -apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;color:#f4f5f5;letter-spacing:-.04em}
-  .entry-card p,.client-order p{color:#a3a6a8}.entry-icon{background:#282a2c;border:0;color:#f3f3f3}
-  .code-form input{background:#101112;border-color:#303234;color:#f2f2f2}
-  .code-form input::placeholder{color:#909496}.samplecode{color:#a2a5a7}
-  .client-view{margin:0 auto}.client-order{padding:16px}
-  .eta{background:#202224;border:1px solid #303234}.eta small{color:#c6c8c9}.eta b{color:#f5f5f5}.eta span{color:#b4b6b7}
-  .queue-position{background:#1d1f21;border-color:#343638}.queue-number{background:#303234;color:#f4f4f4}
-  .queue-position b{color:#f1f1f1}.queue-position small{color:#aaaeb0}
-  .milestone{color:#a4a7a9}.milestone:not(:last-child):after{background:#343638}
-  .milestone.complete:not(:last-child):after{background:#e89443}
-  .milestone i{background:#151719;border-color:#45484a;color:#b7b9ba}
-  .milestone.complete i,.milestone.now i{background:#ed9a45;border-color:#ed9a45;color:#151515}
-  .client-footer{background:#1c1e20;border:1px solid #303234}.client-footer b{color:#f1f1f1}.client-footer small{color:#a5a8a9}
-  .received-note{background:#222426;color:#f0f0f0;border:1px solid #343638}
-  .failure-note{background:#332521;border-color:#704437;color:#f4c3b0}.failure-note b{color:#ffd0bd}.failure-note small{color:#e6b9a8}
-  .backdrop{background:#000b;backdrop-filter:blur(5px)}
-  .modal{background:#151719;border:1px solid #343638;box-shadow:0 18px 50px #000b;backdrop-filter:none}
-  .modalhead{border-color:#2d3032}.modalhead h2{color:#f2f2f2}
-  .field label{color:#c1c4c5}.field input,.field select,.field textarea{background:#101112;color:#f2f2f2;border-color:#343638}
-  .settings-preview{background:#1c1e20;border:0}.settings-preview b{color:#f0f1f1}.settings-preview small{color:#a4a7a9}
-  .toast{background:#191b1d;border:1px solid #36393b;color:#f3f3f3;box-shadow:0 5px 18px #0008;bottom:81px}
-  .mobile-bottom-nav{position:fixed;z-index:24;left:0;right:0;bottom:0;display:flex;justify-content:space-around;gap:3px;padding:5px 7px calc(5px + env(safe-area-inset-bottom));background:#101112;border-top:1px solid #292b2d;box-shadow:0 -4px 16px #0006}
-  .mobile-nav-item{min-width:0;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:53px;border:0;border-radius:9px;background:transparent;color:#a5a8a9;font:500 9px/1.15 -apple-system,BlinkMacSystemFont,"SF Pro Text",sans-serif}
-  .mobile-nav-item.active{color:#fff;background:#1b1d1f}
-  .mobile-nav-item.active .mobile-nav-icon{color:#ed9a45}
-  .mobile-nav-icon{font-size:18px;line-height:1;color:#d4d6d6}
-  .message-empty{padding:24px 18px;text-align:center}.message-icon{font-size:28px;color:#ed9a45}
-  .message-empty h2{font-size:17px;color:#f4f5f5;margin:10px 0 5px}.message-empty p{font-size:12px;color:#a3a6a8;margin:0 0 18px}
+  .entry-card h2,.client-order h2{font:700 21px/1.15 -apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;color:#171819;letter-spacing:-.04em}
+  .entry-card p,.client-order p{color:#73777a}.entry-icon{background:#f0f0ee;border:0;color:#171819}
+  .code-form input{background:#fff;border-color:#dfe1de;color:#171819}
+  .code-form input::placeholder{color:#898d8f}.samplecode{color:#73777a}
+  .client-view{margin:0 auto}.client-order{padding:16px;display:flex;flex-direction:column}
+  .client-order h2{order:2}.client-order>p{order:3}.client-order>.status{order:1;align-self:flex-start}
+  .client-order .eta{order:4;background:#f2f2f0;border:0}.eta small{color:#676b6d}.eta b{color:#111213}.eta span{color:#686c6e}
+  .client-order .timeline{order:5}.milestone{color:#73777a}
+  .milestone:not(:last-child):after{background:#e1e2df}.milestone.complete:not(:last-child):after{background:#252728}
+  .milestone i{background:#fff;border-color:#d7d9d6;color:#8c9092}
+  .milestone.complete i,.milestone.now i{background:#111213;border-color:#111213;color:#fff}
+  .client-order .queue-position{order:6;background:#fafaf9;border-color:#e5e6e3}
+  .queue-number{background:#ececea;color:#171819}.queue-position b{color:#222425}.queue-position small{color:#73777a}
+  .client-order .client-map{order:7}
+  .client-order .client-footer{order:8;background:#f3f3f1;border:0}
+  .client-footer b{color:#171819}.client-footer small{color:#73777a}
+  .client-order .receipt{order:9}.client-order>#changeCode{order:10}
+  .received-note{background:#f0f0ee;color:#252728;border:0}
+  .failure-note{background:#fff5f1;border-color:#efd8d0;color:#743d2f}.failure-note b{color:#863b2d}.failure-note small{color:#805f53}
+  .backdrop{background:#13141477;backdrop-filter:blur(5px)}
+  .modal{background:#fff;border:1px solid #e5e6e3;box-shadow:0 18px 50px #0003;backdrop-filter:none}
+  .modalhead{border-color:#e5e6e3}.modalhead h2{color:#171819}
+  .field label{color:#55595b}.field input,.field select,.field textarea{background:#fff;color:#171819;border-color:#dfe1de}
+  .settings-preview{background:#f4f4f2;border:0}.settings-preview b{color:#222425}.settings-preview small{color:#73777a}
+  .toast{background:#111213;border:0;color:#fff;box-shadow:0 5px 18px #0002;bottom:81px}
+  .mobile-bottom-nav{position:fixed;z-index:24;left:0;right:0;bottom:0;display:flex;justify-content:space-around;gap:3px;padding:5px 7px calc(5px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid #e5e6e3;box-shadow:0 -4px 16px #1012140d}
+  .mobile-nav-item{min-width:0;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:53px;border:0;border-radius:9px;background:transparent;color:#73777a;font:500 9px/1.15 -apple-system,BlinkMacSystemFont,"SF Pro Text",sans-serif}
+  .mobile-nav-item.active{color:#111213;background:#f3f3f1}
+  .mobile-nav-item.active .mobile-nav-icon{color:#111213}
+  .mobile-nav-icon{font-size:18px;line-height:1;color:#707476}
+  .message-empty{padding:24px 18px;text-align:center}.message-icon{font-size:28px;color:#111213}
+  .message-empty h2{font-size:17px;color:#171819;margin:10px 0 5px}.message-empty p{font-size:12px;color:#73777a;margin:0 0 18px}
 }
-
 </style></head>
 <body><div class="shell">
 <header class="topbar"><div class="brand"><span class="brandmark" id="brandmark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m4 12 8-7 16 7-8 7-16-7Zm0 0v12l16 6V19M12 5v12m8 2v11m8-19v12" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m7 12 5-4 9 4-5 4-9-4Z" fill="currentColor" opacity=".35"/></svg></span><span><b id="brandname">Rota Madeira</b><small>Materiais para construção</small></span></div><div class="topspacer"></div><button class="mobile-menu-btn" id="mobileMenu" aria-label="Abrir menu de áreas" aria-expanded="false">☰</button><nav class="role-switch" id="roles" aria-label="Escolher área"><button class="active" data-mode="manager">Visão geral</button><button data-mode="driver">Motorista</button><button data-mode="client">Cliente</button></nav><button class="profilebtn" id="profile"><span class="profiledot">RM</span><span>Minha loja　⌄</span></button></header>
@@ -235,12 +264,12 @@ function mapSvg(){return `<svg viewBox="0 0 800 360" preserveAspectRatio="xMidYM
 function timeOptions(){return Array.from({length:12},(_,i)=>`<option>${i+7}h – ${i+8}h</option>`).join("")}
 function statBadge(s){return `<span class="status ${statusClass(s)}">${s}</span>`}
 function row(d){return `<tr><td><div class="client"><i class="avatar">${d.initials}</i><span><b>${d.name}</b><small>Pedido ${d.id}</small></span></div></td><td>${d.address}</td><td>${d.time}</td><td>${statBadge(d.status)}${d.failureReason?`<small class="failure-note" style="display:block;padding:6px 8px;margin-top:5px">${d.failureReason}${d.rescheduleRequested?" · nova tentativa solicitada":""}</small>`:""}</td><td><button class="rowmore" data-code="${d.id}" aria-label="Abrir entrega">›</button></td></tr>`}
-function manager(){const routeCount=orders.filter(x=>["Em rota","Próxima"].includes(x.status)).length,done=orders.filter(x=>x.status==="Concluída"||x.status==="Recebido").length;return `<div class="heading"><div><div class="eyebrow">QUARTA-FEIRA · 14 DE OUTUBRO</div><h1>Bom dia! 👋</h1><p>Veja como estão as entregas da sua loja hoje.</p></div><button class="btn primary" id="newOrder">＋　Nova entrega</button></div>
+function manager(){const routeCount=orders.filter(x=>["Em rota","Próxima"].includes(x.status)).length,done=orders.filter(x=>x.status==="Concluída"||x.status==="Recebido").length;return `<div class="heading"><div><div class="eyebrow">QUARTA-FEIRA · 14 DE OUTUBRO</div><h1><span class="desktop-heading">Bom dia! 👋</span><span class="mobile-heading">Entregas de hoje</span></h1><p>Veja como estão as entregas da sua loja hoje.</p></div><button class="btn primary" id="newOrder">＋　Nova entrega</button></div>
 <div class="metrics"><article class="metric"><div class="metricline">Entregas de hoje<span class="metricicon">▣</span></div><strong>${orders.length}<small>pedidos</small></strong></article><article class="metric"><div class="metricline">Em andamento<span class="metricicon">🚚</span></div><strong>${routeCount}<small>na rota</small></strong></article><article class="metric"><div class="metricline">Concluídas<span class="metricicon">✓</span></div><strong>${done}<small>entregues</small></strong></article><article class="metric"><div class="metricline">Precisam de atenção<span class="metricicon" style="background:var(--orange-pale);color:#a9681f">!</span></div><strong>${orders.filter(x=>x.status==="Não entregue").length}<small>ocorrências</small></strong></article></div>
 <div class="layout"><article class="card"><div class="cardhead"><div><h2>Rota de hoje</h2><p>Rafael está a caminho das próximas entregas</p></div><button class="textbtn" data-mode="driver">Ver como motorista　→</button></div><div class="map">${mapSvg()}<span class="mapbadge"><i></i>Posição aproximada do caminhão</span></div><div class="route-summary"><span class="truckicon">🚚</span><span><b>Rota 03 · Caminhão 02</b><small>Motorista: Rafael Martins · 5 paradas</small></span><span class="right"><b>3 de 5</b><small>entregas concluídas</small></span></div></article>
 <div class="stack"><article class="card"><div class="cardhead"><div><h2>Motorista</h2><p>Rota ativa desde 9h10</p></div><span class="online">● Em rota</span></div><div class="driver"><i class="avatar">RM</i><span><b>Rafael Martins</b><small>Caminhão 02 · placa IXY-4A21</small></span></div><div class="progressbox"><div class="progresslabel"><span>Andamento da rota</span><b>60%</b></div><div class="progress"><i></i></div></div><div class="stops"><div class="stop"><i class="stopnum">4</i><span><b>Próxima parada</b><small>${orders.find(x=>x.status==="Em rota")?.name||"Marcos Oliveira"} · Jardim das Flores</small></span><time>10h – 11h</time></div></div></article><article class="card"><div class="cardhead"><div><h2>Próximas paradas</h2><p>Previsão aproximada de chegada</p></div><button class="textbtn" data-mode="driver">Ver rota</button></div><div class="stops">${orders.filter(x=>x.status!=="Concluída").slice(0,3).map((d,i)=>`<div class="stop"><i class="stopnum">${i+4}</i><span><b>${d.name}</b><small>${d.address.split("·")[1]||"Centro"}</small></span><time>${d.time.split(" – ")[0]}</time></div>`).join("")}</div></article></div></div>
 <article class="card tablecard"><div class="cardhead"><div><h2>Entregas de hoje</h2><p>${orders.length} pedidos programados</p></div><div class="tabletools"><label class="search">⌕ <input id="search" placeholder="Buscar pedido"></label></div></div><div class="cardhead" style="padding-top:0"><div class="pills">${["Todas","Em rota","Aguardando","Concluída","Não entregue"].map(x=>`<button class="pill ${filter===x?"active":""}" data-filter="${x}">${x}</button>`).join("")}</div></div><div class="tablewrap"><table class="table"><thead><tr><th>Cliente / pedido</th><th>Endereço</th><th>Previsão</th><th>Status</th><th></th></tr></thead><tbody id="rows">${orders.map(row).join("")}</tbody></table></div></article>`}
-function driverView(){const current=orders.find(x=>x.id===activeDeliveryId)||orders.find(x=>x.status==="Em rota")||orders.find(x=>x.status==="Próxima")||orders[0];return `<div class="heading"><div><div class="eyebrow">ROTA 03 · CAMINHÃO 02</div><h1>Olá, Rafael 👋</h1><p>São 10h18 · Você tem ${orders.filter(x=>x.status!=="Concluída").length} entregas pela frente.</p></div><button class="btn primary" id="newOrder">＋　Nova entrega</button></div><div class="mode-hint"><strong>Seu próximo destino</strong> · atualize o status com um toque. As mudanças ficam salvas neste aparelho.</div><div class="driver-layout"><article class="card driver-card"><div class="cardhead"><div><h2>Próxima entrega</h2><p class="route-kicker">Parada ${current.routePosition||8} de ${current.routeTotal||9} · previsão ${current.time}</p></div>${statBadge(current.status)}</div><div class="next-card"><div class="label">Pedido ${current.id}</div><h3>${current.name}</h3><div class="cargo-box"><small>O que será entregue</small><b>📦　${current.products||"Produtos cadastrados na venda"}</b></div>${current.urgent?`<div class="urgency-chip" style="margin-top:9px">⚠ Entrega urgente</div>`:""}<div class="address"><span>📍</span><span>${current.address}</span></div>${current.reference?`<div class="reference">Referência: ${current.reference}</div>`:""}<div style="display:flex;gap:8px;margin-top:13px"><a class="btn soft" id="callClient" href="tel:${current.phone||""}" style="text-decoration:none">☎　Ligar para o cliente</a><a class="btn outline" id="directions" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(current.address)}" target="_blank" rel="noopener" style="text-decoration:none">↗　Ver caminho</a></div></div>${current.failureReason?`<div class="failure-note"><b>Tentativa registrada</b><small>${current.failureReason}${current.failureNote?` · ${current.failureNote}`:""}${current.rescheduleRequested?" · Cliente pediu uma nova tentativa":""}</small></div>`:""}<div class="action-label">Atualizar entrega</div><div class="status-actions"><button class="btn primary" data-status="Estou a caminho"><span class="action-symbol">➜</span>Estou a caminho</button><button class="btn accent" data-status="Concluída"><span class="action-symbol">✓</span>Entrega realizada</button><button class="btn soft" data-status="Não entregue"><span class="action-symbol">!</span>Não foi possível entregar</button></div><p style="font-size:10px;color:var(--muted);margin:12px 0 0">Foto do local é opcional. Adicione apenas se ajudar a registrar uma ocorrência.</p></article><div class="stack"><article class="card"><div class="cardhead"><div><h2>Minha rota</h2><p>Posição aproximada do veículo</p></div></div><div class="map tall">${mapSvg()}</div><div class="progressbox" style="padding-top:14px"><div class="progresslabel"><span>Paradas concluídas</span><b>3 de ${orders.length}</b></div><div class="progress"><i></i></div></div></article><article class="card"><div class="cardhead"><div><h2>Paradas seguintes</h2><p>Você vê só as entregas da sua rota</p></div></div><div class="deliveries-list" style="padding:0 13px 14px">${orders.map((d,i)=>`<div class="delivery-row ${d.id===current.id?"current":""}"><i class="stopnum">${i+1}</i><span><b>${d.name}</b><small>${d.address.split("·")[1]||"Centro"} · ${d.time}</small></span>${statBadge(d.status)}</div>`).join("")}</div></article></div></div>`}
+function driverView(){const current=orders.find(x=>x.id===activeDeliveryId)||orders.find(x=>x.status==="Em rota")||orders.find(x=>x.status==="Próxima")||orders[0];return `<div class="heading"><div><div class="eyebrow">ROTA 03 · CAMINHÃO 02</div><h1><span class="desktop-heading">Olá, Rafael 👋</span><span class="mobile-heading">Minha rota</span></h1><p>São 10h18 · Você tem ${orders.filter(x=>x.status!=="Concluída").length} entregas pela frente.</p></div><button class="btn primary" id="newOrder">＋　Nova entrega</button></div><div class="mode-hint"><strong>Seu próximo destino</strong> · atualize o status com um toque. As mudanças ficam salvas neste aparelho.</div><div class="driver-layout"><article class="card driver-card"><div class="cardhead"><div><h2>Próxima entrega</h2><p class="route-kicker">Parada ${current.routePosition||8} de ${current.routeTotal||9} · previsão ${current.time}</p></div>${statBadge(current.status)}</div><div class="next-card"><div class="label">Pedido ${current.id}</div><h3>${current.name}</h3><div class="cargo-box"><small>O que será entregue</small><b>📦　${current.products||"Produtos cadastrados na venda"}</b></div>${current.urgent?`<div class="urgency-chip" style="margin-top:9px">⚠ Entrega urgente</div>`:""}<div class="address"><span>📍</span><span>${current.address}</span></div>${current.reference?`<div class="reference">Referência: ${current.reference}</div>`:""}<div style="display:flex;gap:8px;margin-top:13px"><a class="btn soft" id="callClient" href="tel:${current.phone||""}" style="text-decoration:none">☎　Ligar para o cliente</a><a class="btn outline" id="directions" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(current.address)}" target="_blank" rel="noopener" style="text-decoration:none">↗　Ver caminho</a></div></div>${current.failureReason?`<div class="failure-note"><b>Tentativa registrada</b><small>${current.failureReason}${current.failureNote?` · ${current.failureNote}`:""}${current.rescheduleRequested?" · Cliente pediu uma nova tentativa":""}</small></div>`:""}<div class="action-label">Atualizar entrega</div><div class="status-actions"><button class="btn primary" data-status="Estou a caminho"><span class="action-symbol">➜</span>Estou a caminho</button><button class="btn accent" data-status="Concluída"><span class="action-symbol">✓</span>Entrega realizada</button><button class="btn soft" data-status="Não entregue"><span class="action-symbol">!</span>Não foi possível entregar</button></div><p style="font-size:10px;color:var(--muted);margin:12px 0 0">Foto do local é opcional. Adicione apenas se ajudar a registrar uma ocorrência.</p></article><div class="stack"><article class="card"><div class="cardhead"><div><h2>Minha rota</h2><p>Posição aproximada do veículo</p></div></div><div class="map tall">${mapSvg()}</div><div class="progressbox" style="padding-top:14px"><div class="progresslabel"><span>Paradas concluídas</span><b>3 de ${orders.length}</b></div><div class="progress"><i></i></div></div></article><article class="card"><div class="cardhead"><div><h2>Paradas seguintes</h2><p>Você vê só as entregas da sua rota</p></div></div><div class="deliveries-list" style="padding:0 13px 14px">${orders.map((d,i)=>`<div class="delivery-row ${d.id===current.id?"current":""}"><i class="stopnum">${i+1}</i><span><b>${d.name}</b><small>${d.address.split("·")[1]||"Centro"} · ${d.time}</small></span>${statBadge(d.status)}</div>`).join("")}</div></article></div></div>`}
 function clientEntry(){return `<div class="client-entry"><section class="card entry-card"><div class="entry-icon">📦</div><div class="eyebrow">ACOMPANHAMENTO DE ENTREGA</div><h2>Sua entrega, no seu tempo.</h2><p>Digite o código que a loja enviou para acompanhar seu pedido. Você não precisa criar uma conta.</p><form class="code-form" id="codeForm"><input id="accessCode" placeholder="Ex.: CR-2841" aria-label="Código de acesso" maxlength="10" required><button class="btn primary">Acompanhar pedido</button></form><div class="error" id="codeError">Não encontramos esse código. Confira e tente novamente.</div><div class="samplecode">Demonstração: use o código <b>CR-2841</b>.</div></section></div>`}
 function clientView(){const d=orders.find(x=>x.id===codeOrder);if(!d)return clientEntry();let done=d.status==="Concluída"||d.status==="Recebido",failed=d.status==="Não entregue";let routePosition=d.routePosition||({"CR-2841":8,"CR-2835":4,"CR-2838":9,"CR-2840":7,"CR-2842":6}[d.id]||1),routeTotal=d.routeTotal||9,stopsAhead=Math.max(0,routePosition-1);let step=done?3:d.status==="Estou a caminho"?2:d.status==="Em rota"?2:1;return `<div class="client-view"><div class="welcome">PEDIDO ${d.id}　·　OLÁ, ${d.name.split(" ")[0].toUpperCase()}</div><section class="card client-order"><span class="status ${statusClass(d.status)}">${d.status==="Recebido"?"Recebimento confirmado":d.status}</span><h2>${done?"Entrega concluída!":failed?"Não foi possível entregar":"Acompanhe sua entrega"}</h2><p>${done?"Obrigado por confirmar o recebimento.":failed?"A loja foi avisada e já recebeu o motivo da tentativa.":"A previsão é aproximada e pode mudar conforme o trânsito."}</p>${failed?`<div class="failure-note"><b>Motivo informado pelo motorista</b><small>${d.failureReason||"Tentativa sem sucesso"}${d.failureNote?` · ${d.failureNote}`:""}</small></div>`:""}<div class="eta"><small>${done?"STATUS DO PEDIDO":failed?"TENTATIVA DE ENTREGA":"PREVISÃO DE CHEGADA"}</small><b>${done?"Pedido recebido":failed?"Entrega não concluída":"10h – 11h"}</b><span>${done?"Recebimento confirmado":failed?"A loja pode combinar uma nova previsão":"Você acompanha apenas o seu pedido"}</span></div><div class="queue-position"><span class="queue-number">${routePosition}º</span><span><b>Sua entrega é a ${routePosition}ª parada de ${routeTotal}</b><small>${stopsAhead?`Há aproximadamente ${stopsAhead} entregas antes da sua.`:"Você é a próxima entrega da rota."}</small></span></div><div class="timeline"><div class="milestone complete"><i>✓</i>Pedido confirmado</div><div class="milestone ${step>=1?"complete":""}"><i>${step>=1?"✓":"2"}</i>Em separação</div><div class="milestone ${step>=2?"now":""} ${step>2?"complete":""}"><i>${step>2?"✓":"🚚"}</i>Em rota</div><div class="milestone ${done?"complete":""}"><i>${done?"✓":"4"}</i>Entregue</div></div>${failed?"":`<div class="client-map">${mapSvg()}</div><div class="client-footer"><span class="truckicon">🚚</span><span><b>Seu pedido está a caminho</b><small>Previsão: 10h – 11h · horário aproximado</small></span></div>`}${done?`<div class="received-note receipt">Recebimento confirmado. Obrigado!</div>`:failed?(d.rescheduleRequested?`<div class="received-note receipt">A loja recebeu seu pedido de uma nova tentativa.</div>`:`<div class="receipt"><button class="btn primary block" id="requestRetry">Solicitar nova tentativa</button></div>`):`<div class="receipt"><button class="btn accent block" id="received">✓　Confirmar que recebi</button></div>`}<button class="textbtn" style="margin-top:12px" id="changeCode">← Consultar outro código</button></section></div>`}
 function mobileMessagesView(){return `<div class="heading"><div><div class="eyebrow">ROTA 03 · CAMINHÃO 02</div><h1>Mensagens</h1><p>Atualizações e conversas da sua rota.</p></div></div><section class="card message-empty"><div class="message-icon">▤</div><h2>Nenhuma mensagem por enquanto</h2><p>As mensagens da loja e dos clientes aparecerão aqui.</p><button class="btn primary" data-mobile-tab="route">Voltar para minha rota</button></section>`}
