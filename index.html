@@ -33,6 +33,98 @@ body{font-family:Manrope,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 .toast{background:#123b45;border:1px solid #9ad6d229;color:#e7f4f4;box-shadow:0 10px 32px #0005}
 @media(max-width:700px){.role-switch{background:#0b202bef;border:1px solid #d5e8e61f;box-shadow:0 6px 24px #0007;backdrop-filter:blur(18px)}.role-switch button{color:#afc4c7}.role-switch button.active{background:#dceef0;color:#0d2b35}.wrap{background:transparent}.tablecard .cardhead{background:transparent}.metric,.card{border-radius:16px}.topbar{padding:0 14px}}
 
+
+/* Mobile reference: warm, simple delivery app with clear touch targets */
+@media(max-width:700px){
+  :root{
+    --forest:#103d2c;--forest2:#19583b;--leaf:#e7f1e4;--cream:#f6f4ee;
+    --paper:#fffefa;--ink:#17231c;--muted:#758078;--line:#e8e8df;
+    --orange:#e99035;--orange-pale:#fff0db;--green:#24754b;
+    --shadow:0 2px 10px #183b280d;--radius:16px;
+    --map-bg:#e8eee5;--map-road:#d7ded6;--map-road-edge:#c8d2c8;
+    --map-accent:#efb35b;--map-route:#174d38;--map-route-highlight:#8fbd9a;
+    --map-block:#d5e1d5;--map-label:#718573;
+  }
+  body{background:var(--cream);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",sans-serif;padding-bottom:82px}
+  .topbar{height:66px;padding:0 15px;background:var(--forest);border:0;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
+  .brand{gap:9px}.brandmark{width:38px;height:38px;border-radius:11px;box-shadow:none}
+  .brand b{font:700 15px/1.1 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",sans-serif;letter-spacing:-.035em;color:white}
+  .brand small{font-size:9px;color:#e3ece5;opacity:.86}
+  .profilebtn{color:white}.profiledot{background:#f0b653;color:var(--forest)}
+  .role-switch{position:fixed;z-index:25;left:0;right:0;bottom:0;justify-content:stretch;gap:0;padding:6px 8px calc(6px + env(safe-area-inset-bottom));border:0;border-top:1px solid #e5e6dc;border-radius:0;background:#fffefa;box-shadow:0 -3px 16px #17231c0c;backdrop-filter:none;-webkit-backdrop-filter:none}
+  .role-switch button{flex:1;color:#6b756d;border-radius:9px;font-size:11px;font-weight:600;padding:11px 4px}
+  .role-switch button.active{background:var(--forest);color:white;box-shadow:none}
+  .wrap{max-width:none;padding:18px 14px 25px;background:transparent;color:var(--ink)}
+  .heading{align-items:center;margin-bottom:15px;gap:10px}
+  .eyebrow{color:var(--green);font-size:10px;letter-spacing:.08em}
+  .heading h1{font:700 25px/1.12 -apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;letter-spacing:-.045em;color:var(--ink);margin:4px 0}
+  .heading p{color:#6f796f;font-size:12px}
+  .heading>.btn{font-size:11px;padding:10px 11px}
+  .date{display:none}
+  .btn{border-radius:11px}.btn.primary{background:var(--forest);color:#fff;border:0;box-shadow:none}
+  .btn.accent{background:var(--orange);color:#332414;box-shadow:none}
+  .btn.soft{background:#f0efe8;color:#3e4a41;border:1px solid #e5e4dc}
+  .btn.outline{background:#fffefa;color:var(--forest);border:1px solid #d8dfd6}
+  .metrics{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:0 0 12px}
+  .metric,.card{background:var(--paper);border:1px solid var(--line);box-shadow:var(--shadow);backdrop-filter:none;-webkit-backdrop-filter:none;border-radius:15px}
+  .metric{padding:12px 13px}.metric:after{display:none}
+  .metricline{font-size:10px;color:#667168}.metric strong{font-size:23px;color:#17231c;margin-top:8px}
+  .metric strong small{color:#788179}.metricicon{height:27px;width:27px;background:var(--leaf);border:0;color:var(--forest)}
+  .layout{display:grid;grid-template-columns:minmax(0,1fr);gap:11px}
+  .stack{grid-template-columns:1fr;gap:11px}
+  .card{border-radius:15px}
+  .cardhead{padding:14px 14px 12px}.cardhead h2{font:700 15px/1.25 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",sans-serif;letter-spacing:-.025em;color:#19241c}
+  .cardhead p{font-size:11px;color:#778078}
+  .textbtn{color:var(--green)}
+  .map{height:220px;margin:0 8px;background:#e8eee5;border:0;border-radius:12px}
+  .mapbadge{background:#fffefa;color:#35523f;border:1px solid #e6e9df;box-shadow:0 2px 7px #193a2610;backdrop-filter:none}
+  .route-summary{padding:12px 14px 14px}.truckicon{background:var(--leaf);border:0;color:var(--forest);border-radius:11px}
+  .route-summary b,.driver b,.stop b,.client b,.next-card h3{color:#17231c}
+  .route-summary small,.driver small,.stop small,.client small,.stop time{color:#758078}
+  .avatar{background:#e7efe5;color:var(--forest);border:0}.online{background:#e7f3e8;color:#347349;border:0}
+  .progresslabel{color:#667168}.progress{background:#ebeee8}.progress i{background:#37804d}
+  .stopnum{background:#e8f0e5;color:#285c39;border:0}
+  .tablecard{margin-top:11px}.tablecard .cardhead{background:transparent}
+  .search{background:#fff;border-color:#e2e5dc;color:#768078}.search input{background:transparent;color:#17231c}
+  .pill{background:#fffefa;color:#687269;border-color:#e8e8df}.pill.active{background:var(--forest);color:#fff;border-color:var(--forest)}
+  .table td{color:#59655d;border-color:#f0f0ea}.client b{color:#25332a}
+  .status{background:#f1f2ec;color:#687268;border:0}.status.route{background:#edf3e5;color:#567d35}
+  .status.next{background:#fff0db;color:#a9681f}.status.done{background:#e8f3e9;color:#287749}
+  .status.late{background:#fcece8;color:#b24936}
+  .mode-hint{background:#f2efe4;border:0;color:#5a675d}.mode-hint strong{color:var(--forest)}
+  .driver-layout{grid-template-columns:1fr;gap:11px}.driver-card{padding:14px}
+  .driver-card .cardhead{padding:0 0 12px}
+  .next-card,.cargo-box{background:#f5f4ec;border:1px solid #e9e8dd}
+  .next-card .label,.cargo-box small{color:#858c81}.next-card p,.next-card .address,.reference{color:#47564a}
+  .cargo-box b{color:#314336}.delivery-row{background:#fff;border-color:#ededdf}
+  .delivery-row.current{border-color:#e9a44e;background:#fffbf2}
+  .delivery-row b{color:#25332a}.delivery-row small{color:var(--muted)}
+  .client-entry{margin:20px auto}.entry-card{padding:20px 17px}
+  .entry-card h2,.client-order h2{font:700 21px/1.15 -apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;color:#17231c;letter-spacing:-.04em}
+  .entry-card p,.client-order p{color:#758078}
+  .entry-icon{background:var(--leaf);border:0;color:var(--forest)}
+  .code-form input{background:#fff;border-color:#dce1d8;color:#17231c}
+  .code-form input::placeholder{color:#89928a}.samplecode{color:#8b9389}
+  .client-view{margin:0 auto}.client-order{padding:16px}
+  .eta{background:#e8f1e4;border:0}.eta small{color:#51735a}.eta b{color:var(--forest)}.eta span{color:#66776a}
+  .queue-position{background:#fff8ec;border-color:#f0dfc6}
+  .queue-number{background:#f2dfc3;color:#704318}.queue-position b{color:#4c3923}.queue-position small{color:#83735f}
+  .milestone{color:#717c72}.milestone:not(:last-child):after{background:#e5e8df}
+  .milestone.complete:not(:last-child):after{background:#5c9666}
+  .milestone i{background:#fff;border-color:#d7ddd2;color:#9ca49b}
+  .milestone.complete i,.milestone.now i{background:#4f8c5c;border-color:#4f8c5c;color:#fff}
+  .client-footer{background:#f7f6f0;border:0}.client-footer b{color:#17231c}.client-footer small{color:#758078}
+  .received-note{background:#e9f4e9;color:#2a7143;border:0}
+  .failure-note{background:#fff3ee;border-color:#f2d5c9;color:#743d2f}
+  .failure-note b{color:#863b2d}.failure-note small{color:#805f53}
+  .backdrop{background:#1b2a2077;backdrop-filter:blur(5px)}
+  .modal{background:#fffefa;border:1px solid #e8e8df;box-shadow:0 18px 50px #15362224;backdrop-filter:none}
+  .modalhead{border-color:#e8e8df}.modalhead h2{color:#17231c}
+  .field label{color:#657168}.field input,.field select,.field textarea{background:#fff;color:#17231c;border-color:#e0e3d9}
+  .settings-preview{background:#f5f4ed;border:0}.settings-preview b{color:#25332a}.settings-preview small{color:#758078}
+  .toast{background:#173f2d;border:0;color:#fff;box-shadow:0 5px 18px #162f1d20;bottom:88px}
+}
+
 </style></head>
 <body><div class="shell">
 <header class="topbar"><div class="brand"><span class="brandmark" id="brandmark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m4 12 8-7 16 7-8 7-16-7Zm0 0v12l16 6V19M12 5v12m8 2v11m8-19v12" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m7 12 5-4 9 4-5 4-9-4Z" fill="currentColor" opacity=".35"/></svg></span><span><b id="brandname">Rota Madeira</b><small>Materiais para construção</small></span></div><div class="topspacer"></div><nav class="role-switch" aria-label="Escolher área"><button class="active" data-mode="manager">Visão geral</button><button data-mode="driver">Motorista</button><button data-mode="client">Cliente</button></nav><button class="profilebtn" id="profile"><span class="profiledot">RM</span><span>Minha loja　⌄</span></button></header>
@@ -50,7 +142,7 @@ const seed=[
 let orders=JSON.parse(localStorage.getItem("cr-orders")||"null")||seed.map(x=>({...x}));let mode="manager",filter="Todas",codeOrder=null,activeDeliveryId=(orders.find(x=>x.status==="Em rota")||orders.find(x=>x.status==="Próxima")||orders[0])?.id;
 const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s);const save=()=>localStorage.setItem("cr-orders",JSON.stringify(orders));
 function statusClass(s){return s==="Em rota"?"route":s==="Próxima"?"next":s==="Concluída"||s==="Recebido"?"done":s==="Não entregue"?"late":""}
-function mapSvg(){return `<svg viewBox="0 0 800 360" preserveAspectRatio="xMidYMid slice" aria-label="Mapa ilustrativo da rota"><rect width="800" height="360" fill="#123744"/><path d="M0 46 800 215M-20 285 800 34M125-20 530 380M305-20 700 380M620-40 210 400M-40 180 820 301" stroke="#254b59" stroke-width="23"/><path d="M0 46 800 215M-20 285 800 34M-40 180 820 301" stroke="#416875" stroke-width="2"/><path d="M110 0 260 360M560 0 390 360" stroke="#e99035" stroke-width="9"/><path d="M95 284c83-60 123-20 204-87s94 10 161-43 116-32 218-98" fill="none" stroke="#174d38" stroke-width="7" stroke-linecap="round" stroke-dasharray="1 0"/><path d="M95 284c83-60 123-20 204-87s94 10 161-43" fill="none" stroke="#b8dedb" stroke-width="3" stroke-linecap="round"/><g fill="#1e4651"><rect x="25" y="75" width="62" height="36" rx="4"/><rect x="162" y="126" width="78" height="32" rx="4"/><rect x="330" y="28" width="66" height="44" rx="4"/><rect x="450" y="120" width="58" height="39" rx="4"/><rect x="625" y="212" width="80" height="39" rx="4"/><rect x="690" y="77" width="45" height="51" rx="4"/><rect x="36" y="230" width="41" height="30" rx="4"/><rect x="310" y="270" width="80" height="34" rx="4"/></g><g fill="#a3c4ca" font-family="sans-serif" font-size="11"><text x="45" y="166">CENTRO</text><text x="605" y="75">VILA NOVA</text><text x="565" y="316">JARDIM DAS FLORES</text></g><circle cx="95" cy="284" r="14" fill="#fff"/><circle cx="95" cy="284" r="9" fill="#e99035" stroke="#fff" stroke-width="3"/><circle cx="680" cy="57" r="17" fill="#fff"/><text x="669" y="64" font-size="18">🚚</text><circle cx="460" cy="154" r="14" fill="#eff8f8" stroke="#fff stroke-width="4"/><text x="456" y="158" font-family="sans-serif" font-size="10" fill="#fff">5</text></svg>`}
+function mapSvg(){return `<svg viewBox="0 0 800 360" preserveAspectRatio="xMidYMid slice" aria-label="Mapa ilustrativo da rota"><rect width="800" height="360" fill="var(--map-bg,#123744)"/><path d="M0 46 800 215M-20 285 800 34M125-20 530 380M305-20 700 380M620-40 210 400M-40 180 820 301" stroke="var(--map-road,#254b59)" stroke-width="23"/><path d="M0 46 800 215M-20 285 800 34M-40 180 820 301" stroke="var(--map-road-edge,#416875)" stroke-width="2"/><path d="M110 0 260 360M560 0 390 360" stroke="var(--map-accent,#e99035)" stroke-width="9"/><path d="M95 284c83-60 123-20 204-87s94 10 161-43 116-32 218-98" fill="none" stroke="var(--map-route,#174d38)" stroke-width="7" stroke-linecap="round" stroke-dasharray="1 0"/><path d="M95 284c83-60 123-20 204-87s94 10 161-43" fill="none" stroke="var(--map-route-highlight,#b8dedb)" stroke-width="3" stroke-linecap="round"/><g fill="var(--map-block,#1e4651)"><rect x="25" y="75" width="62" height="36" rx="4"/><rect x="162" y="126" width="78" height="32" rx="4"/><rect x="330" y="28" width="66" height="44" rx="4"/><rect x="450" y="120" width="58" height="39" rx="4"/><rect x="625" y="212" width="80" height="39" rx="4"/><rect x="690" y="77" width="45" height="51" rx="4"/><rect x="36" y="230" width="41" height="30" rx="4"/><rect x="310" y="270" width="80" height="34" rx="4"/></g><g fill="var(--map-label,#a3c4ca)" font-family="sans-serif" font-size="11"><text x="45" y="166">CENTRO</text><text x="605" y="75">VILA NOVA</text><text x="565" y="316">JARDIM DAS FLORES</text></g><circle cx="95" cy="284" r="14" fill="#fff"/><circle cx="95" cy="284" r="9" fill="#e99035" stroke="#fff" stroke-width="3"/><circle cx="680" cy="57" r="17" fill="#fff"/><text x="669" y="64" font-size="18">🚚</text><circle cx="460" cy="154" r="14" fill="#eff8f8" stroke="#fff stroke-width="4"/><text x="456" y="158" font-family="sans-serif" font-size="10" fill="#fff">5</text></svg>`}
 function timeOptions(){return Array.from({length:12},(_,i)=>`<option>${i+7}h – ${i+8}h</option>`).join("")}
 function statBadge(s){return `<span class="status ${statusClass(s)}">${s}</span>`}
 function row(d){return `<tr><td><div class="client"><i class="avatar">${d.initials}</i><span><b>${d.name}</b><small>Pedido ${d.id}</small></span></div></td><td>${d.address}</td><td>${d.time}</td><td>${statBadge(d.status)}${d.failureReason?`<small class="failure-note" style="display:block;padding:6px 8px;margin-top:5px">${d.failureReason}${d.rescheduleRequested?" · nova tentativa solicitada":""}</small>`:""}</td><td><button class="rowmore" data-code="${d.id}" aria-label="Abrir entrega">›</button></td></tr>`}
